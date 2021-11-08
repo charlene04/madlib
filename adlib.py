@@ -88,8 +88,7 @@ class AdLib(object):
     def clear_input(self):
         for entry in self.entry_boxes:
             self.entry_boxes[entry].delete(0, END)
-        for variable_name in self.variables:
-            self.variables[variable_name] = StringVar()
+        
         
     
     def generate_sentence(self):
