@@ -17,7 +17,8 @@ v = IntVar()
 app.title('Welcome to Sentence Generator GUI emulator')
 # app.attributes('-fullscreen', True)
 app.minsize(width=800, height=550)
-app.maxsize(width=800, height=550)
+#app.maxsize(width=800, height=550)
+app.resizable(True, True)
 app.columnconfigure(0, weight=1)
 app.columnconfigure(1,  weight=1)
 
@@ -25,17 +26,7 @@ labelframe1 = LabelFrame(app, text="Choose a Template",  pady=20, padx=20)
 labelframe1.grid(row=0, column=0, rowspan=2,  columnspan=2, sticky = NS)
 
 labelframe2 = LabelFrame(app, text="Please fill in the Text Boxes", pady=10, padx=20)
-labelframe2.grid(row=3, rowspan=9, column=0, columnspan=2, sticky = NS)
-
-scrollbar = Scrollbar(labelframe2)
-scrollbar.grid(row=3, column=2)
-
-# labelframe2.configure(yscrollcommand=scrollbar.set)
-# scrollbar.configure(command=labelframe2.yview)
-
-def generate_sentence():
-    print('OK')
-    
+labelframe2.grid(row=3, rowspan=9, column=0, columnspan=2, sticky = NS)    
 
     
 def display_radio_buttons():
@@ -140,7 +131,6 @@ def start_game():
    
 
 if __name__ == "__main__":
-    os.system('clear')
     start_game()
     
 
